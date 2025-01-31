@@ -1,20 +1,21 @@
 function checkAge() {
+    console.log("hello");
     const ageInput = document.getElementById("age-input").value;
 
     const age = Number(ageInput);
 
     let errorMessage = "";
 
-    if (age = isNaN) {
-        let errorMessage = "Invalid Input!";
+    if (isNaN(age)) {
+        errorMessage = "Not a number!";
     } else if (age % 1 != 0) {
-        let errorMessage = "Invalid Input!";
+        errorMessage = "No decimal points";
     } else if (age < 0) {
-        let errorMessage = "Invalid Input!";
+        errorMessage = "No negatives!";
     } else if (age < 18) {
-        let errorMessage = "Invalid Input!";
+        errorMessage = "Too Young!";
     } else if (age > 120) {
-        let errorMessage = "Invalid Input!";
+        errorMessage = "Too Old!";
     }
 
     if (errorMessage === "") {
