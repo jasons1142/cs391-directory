@@ -13,33 +13,29 @@
                 <h1>JavaScript Calculator</h1>
             </header>
 
-            <main>
-                <div id="calculator-main">
-                    <div class="inputs">
-                        <p>Input 1</p>
-                        <input type="text" id="first-number">
-                        <p>Input 2</p>
-                        <input type="text" id="second-number">
-                    </div>
+                <main>
+                    <div id="calculator-container">
+                            <p>Input 1</p>
+                            <input type="text" id="first-number">
+                            <p>Input 2</p>
+                            <input type="text" id="second-number">
 
-                    <div class="buttons">
-                        <button onclick="addition()">+</button>
-                        <button onclick="subtraction()">-</button>
-                        <button onclick="multiplication()">*</button>
-                        <button onclick="division()">/</button>
-                        <button onclick="power()">**</button>
-                        <button onclick="clearInputs()">Clear</button>
+                        <div id = "calculator-buttons">
+                            <button onclick="addition()">+</button>
+                            <button onclick="subtraction()">-</button>
+                            <button onclick="multiplication()">*</button>
+                            <button onclick="division()">/</button>
+                            <button onclick="power()">**</button>
+                            <button onclick="clearInputs()">Clear</button>
+                        </div>
+                            <p id="output"></p>
                     </div>
-
-                    <div id="output-container">
-                        <p id="output"></p>
-                    </div>
-                </div>
-            </main>
-
+                </main>
+            
             <footer>
                 <p>All Rights Reserved by Jason Senecharles <a href = credits/html>Credits</a> &#169</p>
             </footer>
         </div>
         <script src="calculator.js"></script>
     </body>
+</html>
