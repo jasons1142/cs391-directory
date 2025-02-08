@@ -75,7 +75,10 @@ main p{
     align-self: center;
     width: 70%;
     margin: 1vh 1vw;
-    font-size: 36px;
+}
+
+#activities-text p{
+    font-size: 40px;
 }
 
 #activities-title{
@@ -158,6 +161,10 @@ footer {
         width: 100%;
         margin: 1vh 1vw;
         font-size: 24px;
+    }
+    
+    #activities-text p{
+        font-size: 40px;
     }
 
     #activities-title{

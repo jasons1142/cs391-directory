@@ -64,17 +64,17 @@ main p{
     font-size: calc(2px + 2vw);
 }
 
-#education-text{
+#education-list{
     align-self: center;
     width: 70%;
     margin: 1vh 1vw;
-    color: black;
+    font-size: calc(2.5px + 2.5vw);
 }
 
 #education-title{
     margin: 2vw 0;
     text-align: center;
-    font-size: calc(2px + 2vw);
+    font-size: calc(3px + 3vw);
     color: orange;
 }
 
@@ -145,15 +145,18 @@ footer {
         justify-content: center;
     }
 
-    #education-text{
+    #education-list{
         align-self: center;
         width: 100%;
         margin: 1vh 1vw;
+        font: 50px;
+        font-size: calc(4px + 4vw);
     }
 
     #education-title{
         text-align: center;
         color: orange;
+        font-size: calc(3px + 3vw);
     }
 }
 
