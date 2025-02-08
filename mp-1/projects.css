@@ -75,6 +75,7 @@ main p{
     align-self: center;
     width: 70%;
     margin: 1vh 1vw;
+    font-size: calc(2.5px + 2.5vw);
 }
 
 #projects-title{
@@ -155,6 +156,7 @@ footer {
         align-self: center;
         width: 100%;
         margin: 1vh 1vw;
+        font-size: calc(4.25px + 4.25vw);
     }
 
     #projects-title{
