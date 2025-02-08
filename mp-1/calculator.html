@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Calculator for Jason Senecharles' Online Resume">
+        <link type="text/css" rel="stylesheet" href="calculator.css">
+        <title>Calculator | Resume</title>
+    </head>
+
+    <body>
+        <div id="calculator-page-wrapper">
+            <header>
+                <h1>JavaScript Calculator</h1>
+                <p>A calculator built with JavaScript.</p>
+            </header>
+
+            <main>
+                <div id="calculator-main">
+                    <div class="inputs">
+                        <input type="text" id="first-number">
+                        <input type="text" id="second-number">
+                    </div>
+
+                    <div class="buttons">
+                        <button onclick="addition()">+</button>
+                        <button onclick="subtraction()">-</button>
+                        <button onclick="multiplication()">*</button>
+                        <button onclick="division()">/</button>
+                        <button onclick="power()">**</button>
+                        <button onclick="clear()">Clear</button>
+                    </div>
+
+                    <div id="output-container">
+                        <p id="output"></p>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>All Rights Reserved by Jason Senecharles <a href = credits/html>Credits</a> &#169</p>
+            </footer>
+        </div>
+        <script src="calculator.js"></script>
+    </body>
