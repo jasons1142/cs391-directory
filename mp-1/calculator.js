@@ -69,7 +69,7 @@ function power() {
 
 }
 
-function clear() {
+function clearInputs() {
     document.getElementById("first-number").value = "";
     document.getElementById("second-number").value = "";
     document.getElementById("output").innerHTML = "";
