@@ -8,7 +8,6 @@ function addition() {
     let output = a + b;
 
     showOutput(output);
-
 }
 
 function subtraction() {
@@ -50,7 +49,6 @@ function division() {
     let output = a / b;
 
     showOutput(output);
-    
 }
 
 function power() {
@@ -66,15 +64,12 @@ function power() {
     }
 
     showOutput(output);
-
 }
 
 function clearInputs() {
     document.getElementById("first-number").value = "";
     document.getElementById("second-number").value = "";
     document.getElementById("output").innerHTML = "";
-    
-    document.getElementById("output").classList.remove("negative");
 }
 
 function showOutput(output) {
@@ -82,8 +77,8 @@ function showOutput(output) {
     result.innerHTML = `${output}`
 
     if (output < 0) {
-        output.classList.add("negative");
+        document.getElementById("output").style.color = "red";
     } else {
-        output.classList.remove("negative");
+        document.getElementById("output").style.color = "black";
     }
 }
