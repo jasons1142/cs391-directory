@@ -1,29 +1,39 @@
 import styled from "styled-components";
 import {Joke} from "../interfaces/Jokes.ts";
-import App from ".././App.tsx";
 
-const JokesPreviewDiv = styled.div`
+const JokesContainerDiv = styled.div`
     display: flex;
     flex-flow: row wrap;    
-    justify-content: space-evenly;
-    background-color: bisque;
+    align-items: center;
+    background-color: blue;
 `;
 
-export default function JokeContent(props : { data:Joke[] } ){
+const JokesDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+    padding: 2%;
+    margin: 1%;
+    font: small-caps bold calc(3px + 2vw) 'Roboto', serif;
+    text-align: center;
+`;
+
+export default function JokeContent(props : { data: Joke[] } ){
 
     return (
         
-        <JokesPreviewDiv>
+        <JokesContainerDiv>
             {
                 props.data.map((joke: Joke) =>
-                    <div key = {joke.id}>
+                    <JokesDiv key = {joke.id}>
                         <h1>{joke.type}</h1>
                         <p>{joke.setup}</p>
                         <p>{joke.punchline}</p>
-                    </div>
+                    </JokesDiv>
                 )
             }
-        </JokesPreviewDiv>
+        </JokesContainerDiv>
     );
 
 }

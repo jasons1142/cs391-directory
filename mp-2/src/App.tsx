@@ -6,7 +6,7 @@ import {Joke} from "./interfaces/Jokes.ts";
 const ParentDiv=styled.div`
     width: 80vw;
     margin: auto;
-    border: 5px darkgoldenrod solid;
+    border: 5px orange solid;
 `;
 
 export default function App() {
@@ -17,13 +17,13 @@ export default function App() {
   useEffect(() => {
       async function fetchData(): Promise<void> {
           const rawData = await fetch("https://official-joke-api.appspot.com/random_joke");
-          const {results} : {results: Joke[]} = await rawData.json();
-          setData(results);
+          const result = await rawData.json();
+          setData([result]);
       }
       fetchData()
           .then(() => console.log("Data fetched successfully"))
           .catch((e: Error) => console.log("There was the error: " + e));
-  }, [data.length]);
+  }, []);
 
 
   return (
