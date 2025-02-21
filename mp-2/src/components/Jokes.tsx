@@ -1,46 +1,29 @@
-import {useEffect, useState} from "react"
-import {styled} from "styled-components";
+import styled from "styled-components";
 import {Joke} from "../interfaces/Jokes.ts";
+import App from ".././App.tsx";
 
 const JokesPreviewDiv = styled.div`
-    margin: 3rem;
-    padding: 1rem;
-    width: 20rem;
-    background-color: blue;
-    color: white;
+    display: flex;
+    flex-flow: row wrap;    
+    justify-content: space-evenly;
+    background-color: bisque;
 `;
 
-const JokesPreview = ({joke}: {joke: Joke}) => {
+export default function JokeContent(props : { data:Joke[] } ){
+
     return (
+        
         <JokesPreviewDiv>
-            <h3>{joke.type}</h3>
-            <p>{joke.setup}</p>
-            <p>{joke.punchline}</p>
+            {
+                props.data.map((joke: Joke) =>
+                    <div key = {joke.id}>
+                        <h1>{joke.type}</h1>
+                        <p>{joke.setup}</p>
+                        <p>{joke.punchline}</p>
+                    </div>
+                )
+            }
         </JokesPreviewDiv>
-    )
-}
-
-export default function JokeContent() {
-    const [jokes, setJokes] = useState<Joke[]>([])
-
-    useEffect(() => {
-        async function getJoke() {
-            const res = await fetch(`https://official-joke-api.appspot.com/random_joke=${jokes}`);
-            const data = await res.json();
-            setJokes(data.data);
-        }
-        getJoke();
-    })
-
-    return (
-        <div>
-            <button>Click Me!</button>
-            <div>
-                {
-                    jokes.map((joke) => <JokesPreview joke = {joke} />)
-                }
-            </div>
-        </div>
-    )
+    );
 
 }
