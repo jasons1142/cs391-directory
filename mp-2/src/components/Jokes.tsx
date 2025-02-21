@@ -7,6 +7,7 @@ const JokesPreviewDiv = styled.div`
     padding: 1rem;
     width: 20rem;
     background-color: blue;
+    color: white;
 `;
 
 const JokesPreview = ({joke}: {joke: Joke}) => {
@@ -20,12 +21,11 @@ const JokesPreview = ({joke}: {joke: Joke}) => {
 }
 
 export default function JokeContent() {
-    const [joke, setJoke] = useState<string | null>(null)
     const [jokes, setJokes] = useState<Joke[]>([])
 
     useEffect(() => {
         async function getJoke() {
-            const res = await fetch(`https://official-joke-api.appspot.com/random_joke=${joke}`);
+            const res = await fetch(`https://official-joke-api.appspot.com/random_joke=${jokes}`);
             const data = await res.json();
             setJokes(data.data);
         }
@@ -36,7 +36,9 @@ export default function JokeContent() {
         <div>
             <button>Click Me!</button>
             <div>
-                <p>joke: {joke}</p>
+                {
+                    jokes.map((joke) => <JokesPreview joke = {joke} />)
+                }
             </div>
         </div>
     )
